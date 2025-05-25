@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background: #faa5fd;
+  background: #ebbac2;
   color: rgb(0, 0, 0);
   padding: 1rem;
   text-align: center;
@@ -48,7 +48,7 @@ article {
   text-align: center;
 }
 footer {
-  background-color: #f0f0f0;
+  background-color: #f5f2f0;
   text-align: center;
   padding: 1.5rem;
   margin-top: 3rem;
@@ -60,20 +60,14 @@ footer {
 .social-links a {
   margin: 0 10px;
   text-decoration: none;
-  color: #007acc;
+  color: #ccd1db;
   font-weight: bold;
 }
 
 .social-links a:hover {
   text-decoration: underline;
 }
-.logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 75%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
+
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -100,7 +94,7 @@ input, textarea {
 button {
   padding: 0.75rem;
   font-size: 1rem;
-  background-color: #007acc;
+  background-color: #858FB4;
   color: white;
   border: none;
   border-radius: 5px;
@@ -110,160 +104,44 @@ button {
 button:hover {
   background-color: #005fa3;
 }
+.side-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px;
+  max-width: 1000px;
+  margin: auto;
+}
 
+.side-text {
+  flex: 1;
+  text-align: right; /* Moves text to the right side within its column */
+}
 
-<style>
-  .recent-posts {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-  }
+.side-text h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #222122;
+}
 
-  .recent-posts h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #333;
-  }
+.side-text p {
+  font-size: 16px;
+  color: #444;
+}
 
-  .post-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
-
-  .post-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
-    overflow: hidden;
-    text-align: left;
-  }
-
-  .post-card:hover {
-    transform: scale(1.02);
-  }
-
-  .post-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .post-card h3 {
-    font-size: 18px;
-    margin: 16px 16px 8px;
-    color: #222;
-  }
-
-  .post-card p {
-    font-size: 14px;
-    color: #555;
-    margin: 0 16px 16px;
-  }
-
-  .post-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-</style>
-<style>
-  .blog-posts {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .blog-posts h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #333;
-  }
-
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
-
-  .blog-card {
-    background: #e9a8a8;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
-    overflow: hidden;
-    text-align: left;
-  }
-
-  .blog-card:hover {
-    transform: scale(1.02);
-  }
-
-  .blog-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .blog-card h3 {
-    font-size: 18px;
-    margin: 16px 16px 8px;
-    color: #222;
-  }
-
-  .blog-card p {
-    font-size: 14px;
-    color: #555;
-    margin: 0 16px 16px;
-  }
-
-  .blog-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-</style>
-<style>
+@media (max-width: 768px) {
   .side-layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 60px;
-    max-width: 1000px;
-    margin: auto;
+    flex-direction: column-reverse;
+    text-align: center;
   }
+  .side-text, .side-image {
+    text-align: center;
+  }
+}
 
-  .side-text {
-    flex: 1;
-    text-align: right; /* Moves text to the right side within its column */
-  }
 
-  .side-text h2 {
-    font-size: 28px;
-    margin-bottom: 12px;
-    color: #b30059;
-  }
-
-  .side-text p {
-    font-size: 16px;
-    color: #444;
-  }
-  }
-
-  @media (max-width: 768px) {
-    .side-layout {
-      flex-direction: column-reverse;
-      text-align: center;
-    }
-    .side-text, .side-image {
-      text-align: center;
-    }
-  }
-</style>
+/* Blog Page */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -372,4 +250,52 @@ body {
 #loadMoreBtn:hover {
   background-color: #e0559c;
 }
-</style>
+/* Inspiration Tab */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #f7f7f7;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+.gallery img:hover {
+  transform: scale(1.03);
+}
+/* Subscribe tab */
+.subscribe-section {
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+}
+  padding: 0.5rem;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.subscribe-section button {
+  padding: 0.5rem 1rem;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.subscribe-section button:hover {
+  background-color: #005f99;
+}
