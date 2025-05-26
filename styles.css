@@ -287,18 +287,6 @@ body {
   border-radius: 4px;
 }
 
-.subscribe-section button {
-  padding: 0.5rem 1rem;
-  background-color: #007acc;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.subscribe-section button:hover {
-  background-color: #005f99;
-}
 /*Navigation Bar Image*/
 .header-image {
   text-align: center;
@@ -325,4 +313,77 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
+}
+.subscribe-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #f7f9fc;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.subscribe-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.subscribe-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe-form h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.subscribe-form p {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.subscribe-form button {
+  padding: 10px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #005f99;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .subscribe-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .subscribe-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
 }
