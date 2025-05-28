@@ -193,8 +193,8 @@ body {
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .blog-card {
@@ -361,7 +361,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .subscribe-form button {
   padding: 10px;
-  background-color: #007acc;
+  background-color: #ee95c9;
   color: white;
   border: none;
   border-radius: 8px;
@@ -371,7 +371,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .subscribe-form button:hover {
-  background-color: #005f99;
+  background-color: #6cb1dd;
 }
 
 /* Responsive */
@@ -386,4 +386,176 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
     margin-bottom: 15px;
   }
+}
+/* Google Font */
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Modern Typewriter Heading */
+#typewriter {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #2c3e50; /* deep modern navy */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #2c3e50;
+  width: fit-content;
+  margin: 40px auto 20px;
+  animation: blink 0.75s step-end infinite;
+}
+
+/* Blinking Cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Optional: Give the about text section a clean look */
+.about-text {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  color: #555;
+}
+/*Instagram Feed*/
+..instagram-feed {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #f8f8f8; /* Optional background */
+}
+/*Mini Bio Section*/
+.mini-bio {
+  background-color: #fefefe;
+  padding: 40px 20px;
+  border-top: 1px solid #eee;
+}
+
+.bio-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bio-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.bio-text {
+  flex: 1;
+}
+
+.bio-text h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.about-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #7a5af8;
+  text-decoration: none;
+  font-weight: bold;
+}
+.about-link:hover {
+  text-decoration: underline;
+}
+/*Hero Section*/
+.hero {
+  position: relative;
+  height: 40vh; /* Smaller height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* Puts video behind */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Puts text on top */
+  padding: 20px;
+  background-color: rgba(232, 170, 170, 0.4); /* Optional for better readability */
+  border-radius: 10px;
+}
+/*Start Here Page*/
+.start-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: white;
+  background-color: #2f901b; /* soft purple */
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.start-button:hover {
+  background-color: #1c5a31;
+}
+.start-here-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+.start-here-page h1,
+.start-here-page h2 {
+  color: #2d2d2d;
+}
+
+.start-here-page ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.start-reading-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: white;
+  background-color: #7a5af8;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.start-reading-button:hover {
+  background-color: #6845e2;
 }

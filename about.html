@@ -1,57 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>About Me</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <h1>About Me</h1>
-      <!-- Image above navbar -->
-  <div class="header-image">
-    <img src="images/middle-logo.jpg" alt="Banner Image">
-  </div>
+    <!-- Image above navbar -->
+    <div class="header-image">
+      <img src="images/middle-logo.jpg" alt="Banner Image">
+    </div>
     <nav>
-     <a href="index.html">Home</a>
-     <a href="about.html">About</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
-     <a href="inspiration.html">Inspiration</a>
+      <a href="inspiration.html">Inspiration</a>
       <a href="contact.html">Contact</a>
-         <a href="subscribe.html">Subscribe</a>
+      <a href="subscribe.html">Subscribe</a>
     </nav>
   </header>
+
   <main class="about-container">
     <img src="images/profile.jpg" alt="My Photo" class="profile-pic">
+
     <section class="about-text">
-      <h2>Hello!
-      </h2>
+      <!-- Animated Intro -->
+      <h2 id="typewriter"></h2>
+
       <p>
-        Hi! I'm Laurel and this is my little slice of the internet, where I share my thoughts, experiences, and everything in between.
+      This is my little slice of the internet, where I share my thoughts, experiences, and everything in between.
       </p>
       <p>
         Honestly, I'm not entirely sure why I started a blog... but here we are. And weirdly, I'm kind of loving it.
       </p>
       <p>
         Right now, I'm working on a bunch of things for this space. One of the biggest (and most surprising) wins? I just started learning how to code and I'm actually really proud of myself.
-        It's something totally new to me, and I'm finding joy in figuring it out, one confusing error message at a time. </p>
-      <p>
-        Here's a bit more about me: I was recently diagnosed with PCOS, and I'm also navigating some mental health challenges. It's been a lot, physically, emotionally, hormonally (shoutout to my overaries for the chaos) but I want this blog to be where I share that journey. The good, the hard, the honest. </p>
-       <p> 
-        If you're dealing with anything similar, or just feel like you're in a season of figuring stuff out... I hope you find a bit of connection here. You're not alone and neither am I. </p>
-        Thanks for being here! &#128155;
+        It's something totally new to me, and I'm finding joy in figuring it out, one confusing error message at a time.
       </p>
       <p>
+        Here's a bit more about me: I was recently diagnosed with PCOS, and I'm also navigating some mental health challenges. It's been a lot, physically, emotionally, hormonally (shoutout to my overaries for the chaos) but I want this blog to be where I share that journey. The good, the hard, the honest.
+      </p>
+      <p>
+        If you're dealing with anything similar, or just feel like you're in a season of figuring stuff out... I hope you find a bit of connection here. You're not alone and neither am I.
+        Thanks for being here! 💙
       </p>
     </section>
   </main>
+
   <footer>
-  <p>Connect with me:</p>
-  <div class="social-links">
-    <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
-    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-  </div>
-  <p>&copy; 2025 Laurel</p>
-</footer>
+    <p>Connect with me:</p>
+    <div class="social-links">
+      <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Laurel</p>
+  </footer>
+
+  <!-- Typing Animation Script -->
+  <script>
+    const text = "Hey, I'm Laurel";
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
 </body>
 </html>
