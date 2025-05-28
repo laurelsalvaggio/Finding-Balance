@@ -504,7 +504,7 @@ body {
   position: relative;
   z-index: 1; /* Puts text on top */
   padding: 20px;
-  background-color: rgba(232, 170, 170, 0.4); /* Optional for better readability */
+  background-color: rgba(255, 255, 255, 0.4); /* Optional for better readability */
   border-radius: 10px;
 }
 /*Start Here Page*/
@@ -514,7 +514,7 @@ body {
   padding: 12px 24px;
   font-size: 1rem;
   color: white;
-  background-color: #2f901b; /* soft purple */
+  background-color: #e699c6; /* soft purple */
   border: none;
   border-radius: 8px;
   text-decoration: none;
@@ -523,7 +523,7 @@ body {
 }
 
 .start-button:hover {
-  background-color: #1c5a31;
+  background-color: #ad598b;
 }
 .start-here-page {
   max-width: 800px;
