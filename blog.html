@@ -12,81 +12,61 @@
     <img src="images/middle-logo.jpg" alt="Banner Image">
   </div>
     <nav>
-         <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-          <a href="inspiration.html">Inspiration</a>
-      <a href="contact.html">Contact</a>
-         <a href="subscribe.html">Subscribe</a>
-    </nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+
+  <!-- Dropdown for Blog -->
+  <div class="dropdown">
+    <a href="blog.html" class="dropbtn">Blog</a>
+    <div class="dropdown-content">
+      <a href="blog-mental-health.html">Mental Health</a>
+      <a href="blog-pcos.html">PCOS</a>
+      <a href="blog-self-care.html">Self-Care</a>
+      <a href="blog-life.html">Life Updates</a>
+    </div>
+  </div>
+
+  <a href="inspiration.html">Inspiration</a>
+  <a href="contact.html">Contact</a>
+  <a href="subscribe.html">Subscribe</a>
+</nav>
+
   </header>
-<main class="blog-page">
 
-  <!-- Visible posts -->
-  <div class="blog-grid" id="visible-posts">
-    <!-- Blog Card 1 -->
-    <a href="post-1.html" class="blog-card">
-      <img src="images/post-1-thumbnail.jpg" alt="Post 1">
-      <div class="card-text">
-        <h3>I Started a Blog... Now What?</h3>
-        <p>May 24, 2025</p>
-      </div>
-    </a>
+<main class="blog-categories">
 
-    <!-- Blog Card 2 -->
-    <a href="post-2.html" class="blog-card">
-      <img src="images/post-2-thumbnail.jpg" alt="Post 2">
-      <div class="card-text">
-        <h3>My First Week Learning to Code</h3>
-        <p>May 25, 2025</p>
-      </div>
-    </a>
-  </div>
+  <!-- Mental Health -->
+  <section class="blog-category">
+    <h2><a href="blog-mental-health.html">&#129504; Mental Health</a></h2>
+  </section>
 
-  <!-- Hidden posts to reveal -->
-  <div class="blog-grid hidden-posts" id="more-posts" style="display: none;">
-    <a href="post-3.html" class="blog-card">
-      <img src="images/post-3-thumbnail.jpg" alt="Post 3">
-      <div class="card-text">
-        <h3>Forgiving Myself</h3>
-        <p>May 30, 2025</p>
-      </div>
-    </a>
+  <!-- PCOS -->
+  <section class="blog-category">
+    <h2><a href="blog-pcos.html">&#129370; PCOS & Hormonal Health</a></h2>
+  </section>
 
-    <a href="post-4.html" class="blog-card">
-      <img src="images/post-4-thumbnail.jpg" alt="Post 4">
-      <div class="card-text">
-        <h3>Coding Meltdowns and Wins</h3>
-        <p>May 5, 2025</p>
-      </div>
-    </a>
-  </div>
+  <!-- Self-Care -->
+  <section class="blog-category">
+    <h2><a href="blog-self-care.html">&#127793; Self-Care & Healing</a></h2>
 
-  <div class="load-more-wrapper">
-    <button id="loadMoreBtn">Load More</button>
-  </div>
+  </section>
+
+  <!-- Personal Growth -->
+  <section class="blog-category">
+    <h2><a href="blog-life.html">&#128172; Life Updates</a></h2>
+  </section>
+
 </main>
 
+ <footer>
+    <p>Connect with me:</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100075793964512" target="_blank">Facebook</a>
+      <a href="https://www.pinterest.com/FindingBalanceBlog/" target="_blank">Pinterest</a>
+      <a href="https://www.instagram.com/laurelfindsbalance/" target="_blank">Instagram</a>
+    </div>
+    <p>&copy; 2025 Laurel</p>
+  </footer>>
 
-</section>
-
-  </main>
-  <footer>
-  <p>Connect with me:</p>
-  <div class="social-links">
-    <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
-    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-  </div>
-  <p>&copy; 2025 Laurel</p>
-</footer>
 </body>
-<script>
-  document.getElementById("loadMoreBtn").addEventListener("click", function () {
-    const morePosts = document.getElementById("more-posts");
-    morePosts.style.display = "grid"; // or "block" if not using grid
-    this.style.display = "none"; // hide the Load More button
-  });
-</script>
-
 </html>
