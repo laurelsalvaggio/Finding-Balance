@@ -5,34 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Finding Balance</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Add this to your styles.css or keep here for now */
+    .recent-post {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fffafc;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .recent-post img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .recent-post h2 {
+      font-size: 2rem;
+      color: #d47fa6;
+      margin-bottom: 10px;
+    }
+
+    .recent-post p {
+      font-size: 1rem;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .read-more-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #d47fa6;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .read-more-button:hover {
+      background-color: #c06e98;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-      <img src="images/welcome-image.jpg" alt="Header Image" class="inline-header-image">
+    <img src="images/welcome-image.jpg" alt="Header Image" class="inline-header-image">
   </header>
 
-<nav class="main-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
 
-  <div class="dropdown">
-    <a href="blog.html" class="dropbtn">Blog</a>
-    <div class="dropdown-content">
-      <a href="blog-mental-health.html">Mental Health</a>
-      <a href="blog-pcos.html">PCOS</a>
-      <a href="blog-life.html">Life Updates</a>
+    <div class="dropdown">
+      <a href="blog.html" class="dropbtn">Blog</a>
+      <div class="dropdown-content">
+        <a href="blog-mental-health.html">Mental Health</a>
+        <a href="blog-pcos.html">PCOS</a>
+        <a href="blog-life.html">Life Updates</a>
+      </div>
     </div>
-  </div>
 
-  <a href="inspiration.html">Inspiration</a>
-  <a href="subscribe.html">Subscribe</a>
-</nav>
-
+    <a href="inspiration.html">Inspiration</a>
+    <a href="subscribe.html">Subscribe</a>
+  </nav>
 
   <section class="hero">
     <h2>Welcome to My Space</h2>
     <p>Exploring healing, creativity, and soft living—one post at a time.</p>
+  </section>
+
+  <!-- 🌟 MOST RECENT BLOG POST SECTION -->
+  <section class="recent-post">
+    <img src="images/post-1-thumbnail.jpg" alt="A Letter to My 16-Year-Old Self">
+    <h2>💌 A Letter to My 16-Year-Old Self</h2>
+    <p>A personal reflection on growth, healing, bad exes, better love, and becoming someone younger me would be proud of.</p>
+    <a href="post-4.html" class="read-more-button">Read More</a>
   </section>
 
   <section class="section">
@@ -53,7 +108,7 @@
     </div>
   </section>
 
- <footer>
+  <footer>
     <p>Connect with me:</p>
     <div class="social-links">
       <a href="https://www.facebook.com/profile.php?id=100075793964512" target="_blank">Facebook</a>
