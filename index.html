@@ -5,75 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Finding Balance</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Add this to your styles.css or keep here for now */
-    .recent-post {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fffafc;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-
-    .recent-post img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
-    .recent-post h2 {
-      font-size: 2rem;
-      color: #d47fa6;
-      margin-bottom: 10px;
-    }
-
-    .recent-post p {
-      font-size: 1rem;
-      color: #444;
-      max-width: 700px;
-      margin: 0 auto 20px;
-    }
-
-    .read-more-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #d47fa6;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .read-more-button:hover {
-      background-color: #c06e98;
-    }
-  </style>
 </head>
+<header class="site-header">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <h1>Finding Balance</h1>
+  <p id="rotating-subtitle"></p>
+</header>
+
 <body>
-
-  <header>
-    <img src="images/welcome-image.jpg" alt="Header Image" class="inline-header-image">
-  </header>
-
   <nav class="main-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-
-    <div class="dropdown">
-      <a href="blog.html" class="dropbtn">Blog</a>
-      <div class="dropdown-content">
-        <a href="blog-mental-health.html">Mental Health</a>
-        <a href="blog-pcos.html">PCOS</a>
-        <a href="blog-life.html">Life Updates</a>
-      </div>
-    </div>
-
-    <a href="inspiration.html">Inspiration</a>
+    <a href="blog-single.html">Blog</a>
+    <a href="moodboard.html">Moodboard</a>
     <a href="subscribe.html">Subscribe</a>
   </nav>
 
@@ -85,9 +29,9 @@
   <!-- 🌟 MOST RECENT BLOG POST SECTION -->
   <section class="recent-post">
     <img src="images/post-1-thumbnail.jpg" alt="A Letter to My 16-Year-Old Self">
-    <h2>💌 A Letter to My 16-Year-Old Self</h2>
-    <p>A personal reflection on growth, healing, bad exes, better love, and becoming someone younger me would be proud of.</p>
-    <a href="post-4.html" class="read-more-button">Read More</a>
+    <h2>💅 The Gel-X Era</h2>
+    <p>My Current (Healthy?) Obsession</p>
+    <a href="post-6.html" class="read-more-button">Read More</a>
   </section>
 
   <section class="section">
@@ -109,6 +53,10 @@
   </section>
 
   <footer>
+    <div class="mini-playlist">
+  <h4>My Current Vibe 🎧</h3>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/15VTWFnARUG5GuJP9IgILV?utm_source=generator" width="100%" height="80px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
     <p>Connect with me:</p>
     <div class="social-links">
       <a href="https://www.facebook.com/profile.php?id=100075793964512" target="_blank">Facebook</a>
@@ -117,6 +65,47 @@
     </div>
     <p>&copy; 2025 Laurel</p>
   </footer>
+<script>
+  const subtitles = [
+    "Soft strength in every season",
+    "Wellness, womanhood & everything in between",
+    "A cozy corner of the internet",
+    "Romanticizing the everyday",
+    "Healing, hormones & honesty"
+  ];
+
+  let current = 0;
+  let charIndex = 0;
+  const subtitleElement = document.getElementById("rotating-subtitle");
+
+  function typeWriter() {
+    const currentText = subtitles[current];
+    if (charIndex < currentText.length) {
+      subtitleElement.innerHTML += currentText.charAt(charIndex);
+      charIndex++;
+      setTimeout(typeWriter, 75); // typing speed
+    } else {
+      setTimeout(eraseWriter, 2000); // pause before erasing
+    }
+  }
+
+  function eraseWriter() {
+    const currentText = subtitles[current];
+    if (charIndex > 0) {
+      subtitleElement.innerHTML = currentText.substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(eraseWriter, 40); // erase speed
+    } else {
+      current = (current + 1) % subtitles.length;
+      setTimeout(typeWriter, 300); // pause before next type
+    }
+  }
+
+  // Start the loop
+  document.addEventListener("DOMContentLoaded", () => {
+    typeWriter();
+  });
+</script>
 
 </body>
 </html>

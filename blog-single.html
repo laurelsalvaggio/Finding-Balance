@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="blog-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <h1 class="intro-text">Welcome to My Cozy Corner 🌸</h1>
+  </header>    
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog-single.html">Blog</a>
+    <a href="moodboard.html">Moodboard</a>
+    <a href="subscribe.html">Subscribe</a>
+  </nav>
+
+
+  <main class="blog-container">
+    <article class="blog-post" data-date="2025-06-08">
+      <h2><a href="post-5.html">💕 Romanticizing My Life: A Beginner’s Guide</a></h2>
+      <p>Because turning your Tuesday into a movie montage is totally valid — and yes, this is my Central Perk era.</p>
+    </article>
+
+    <article class="blog-post" data-date="2025-05-30">
+      <h2><a href="post-4.html">💌 A Letter to My 16-Year-Old Self</a></h2>
+      <p>Just a letter to younger me lol</p>
+    </article>
+<article class="blog-post" data-date="2025-05-28">
+      <h2><a href="post-1.html">😭 Feelings, Freakouts & Finally Blogging</a></h2>
+      <p>Literally my first ever blog post</p>
+    </article>
+ <article class="blog-post" data-date="2025-05-29">
+      <h2><a href="post-2.html">👩🏻‍💻 First Coding Project</a></h2>
+      <p>Why a Website?</p>
+    </article>   
+<article class="blog-post" data-date="2025-05-30">
+      <h2><a href="post-3.html">💗 Forgiving Myself</a></h2>
+      <p>A very good leason in learning to forgive myself.</p>
+    </article>
+ <article class="blog-post" data-date="2025-06-11">
+        <h2><a href="post-6.html"> 💅 The Gel-X Era</a></h2>
+        <p>Why I love my Gel-X nails and how they make me feel like a million bucks.</p>
+ </article>   
+  </main>
+
+  <section class="archive" id="dynamic-archive">
+    <h3>Archive</h3>
+    <!-- JavaScript will fill this -->
+  </section>
+
+  <footer>
+    <p>Connect with me:</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100075793964512" target="_blank">Facebook</a>
+      <a href="https://www.pinterest.com/FindingBalanceBlog/" target="_blank">Pinterest</a>
+      <a href="https://www.instagram.com/laurelfindsbalance/" target="_blank">Instagram</a>
+    </div>
+    <p>&copy; 2025 Laurel</p>
+  </footer>
+
+  <script>
+ const posts = document.querySelectorAll(".blog-post");
+const archive = {};
+
+posts.forEach(post => {
+  const date = post.getAttribute("data-date");
+  if (!date) return;
+
+  const [year, month] = date.split("-");
+  const dateObj = new Date(date);
+  const monthName = dateObj.toLocaleString('default', { month: 'long' });
+  const key = `${monthName} ${year}`;
+
+  if (!archive[key]) archive[key] = [];
+
+  const titleEl = post.querySelector("h2 a");
+  const title = titleEl?.innerText || "Untitled Post";
+  const link = titleEl?.getAttribute("href") || "#";
+
+  archive[key].push({ title, link });
+});
+
+const sortedKeys = Object.keys(archive).sort((a, b) => new Date(b) - new Date(a));
+const archiveContainer = document.getElementById("dynamic-archive");
+
+sortedKeys.forEach(key => {
+  const section = document.createElement("section");
+  section.classList.add("archive-month");
+
+  const heading = document.createElement("h4");
+  heading.innerText = key;
+  section.appendChild(heading);
+
+  const ul = document.createElement("ul");
+  archive[key].forEach(post => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${post.link}">${post.title}</a>`;
+    ul.appendChild(li);
+  });
+
+  section.appendChild(ul);
+  archiveContainer.appendChild(section);
+});
+  </script>
+
+</body>
+</html>

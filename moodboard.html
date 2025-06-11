@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monthly Moodboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+    <h1>🌿 Monthly Moodboard</h1>
+    <p>A space for visual inspiration, dreams, and monthly vibes ✨</p>
+  </header>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog-single.html">Blog</a>
+    <a href="moodboard.html">Moodboard</a>
+    <a href="subscribe.html">Subscribe</a>
+  </nav>
+ <main>
+  <h2 id="moodboard-title"></h2>
+  <div class="moodboard-grid" id="moodboard-grid"></div>
+</main>
+
+<script>
+  const moodboards = {
+    june: [
+      "images/moodboard/june/1.jpg",
+      "images/moodboard/june/2.jpg",
+      "images/moodboard/june/3.jpg",
+      "images/moodboard/june/4.jpg",
+    ],
+    // Add other months here, e.g.:
+    // july: ["images/moodboard/july/1.jpg", ...]
+  };
+
+  const now = new Date();
+  const monthKey = now.toLocaleString("default", { month: "long" }).toLowerCase();
+  const displayMonth = now.toLocaleString("default", { month: "long" });
+  const year = now.getFullYear();
+
+  const images = moodboards[monthKey] || [];
+  const grid = document.getElementById("moodboard-grid");
+  const title = document.getElementById("moodboard-title");
+
+  title.textContent = `${displayMonth} ${year} Moodboard`;
+
+  images.forEach((src, index) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `${displayMonth} vibe ${index + 1}`;
+
+    // Random collage-style positioning
+    img.style.position = "absolute";
+    img.style.top = `${Math.random() * 60 + 5}%`;
+    img.style.left = `${Math.random() * 60 + 5}%`;
+    img.style.transform = `rotate(${Math.random() * 20 - 10}deg)`;
+        img.style.width = `${Math.random() * 50 + 100}px`;
+    
+        grid.appendChild(img);
+      });
+    </script>
